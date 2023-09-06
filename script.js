@@ -23,6 +23,7 @@ image.onload = (function () {
 //キャンバスに文字を描く
 function drawText()
 {
+    var element = document.getElementById('myslider');
     var canvasImg = document.getElementById("canvas-img");
     var text = document.getElementById('canvas_text');
     //文字のスタイルを指定
@@ -32,10 +33,8 @@ function drawText()
     ctx.textBaseline = 'bottom';
     ctx.textAlign = 'center';
     //座標を指定して文字を描く（座標は画像の中心に）
-    var x = (canvas.width / 2);
-    x = Math.ceil(canvas.width-(Number(element.value)*2+element.value.length*(Number(element.value)/1)));
-    var y = (canvas.height / 2);
-    y = Math.ceil(canvas.height-1.75*Number(element.value)+Number(element.value));
+    var x = Math.ceil(canvas.width - (Number(element.value)/4 * text.value.length) - Number(element.value));
+    var y = Math.ceil(canvas.height-0.75*Number(element.value));
     console.log(x);
     console.log(y);
     ctx.drawImage(canvasImg, 0, 0);
