@@ -1,3 +1,11 @@
 /* #canvas-img {
     display: none;
 } */
+@font-face
+{
+font-family: IPAMincho;
+src: url('https://cdn.leafscape.be/IPAfont/ipam_web.ttf');
+}
+body {
+    font-family: IPAMincho;
+}
