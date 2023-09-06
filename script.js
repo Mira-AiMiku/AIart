@@ -2,23 +2,23 @@
 var canvas;
 var base64;
 var ctx;
-canvas = document.getElementById('preview');
-ctx = canvas.getContext('2d');
-var canvasImg = document.getElementById("canvas-img");
-ctx.drawImage(canvasImg, 0, 0);
-// var image = new Image();
-// image.src = 'test.png';
-// image.onload = (function () {
-//     //画像ロードが完了してからキャンバスの準備をする
-//     canvas = document.getElementById('preview');
-//     ctx = canvas.getContext('2d');
-//     //キャンバスのサイズを画像サイズに合わせる
-//     canvas.width = image.width;
-//     canvas.height = image.height;
-//     //キャンバスに画像を描画（開始位置0,0）
-//     canvasImg = document.getElementById("canvas-img");
-//     ctx.drawImage(canvasImg, 0, 0);
-// });
+// canvas = document.getElementById('preview');
+// ctx = canvas.getContext('2d');
+// var canvasImg = document.getElementById("canvas-img");
+// ctx.drawImage(canvasImg, 0, 0);
+var image = new Image();
+image.src = 'test.png';
+image.onload = (function () {
+    //画像ロードが完了してからキャンバスの準備をする
+    canvas = document.getElementById('preview');
+    ctx = canvas.getContext('2d');
+    //キャンバスのサイズを画像サイズに合わせる
+    canvas.width = image.width;
+    canvas.height = image.height;
+    //キャンバスに画像を描画（開始位置0,0）
+    var canvasImg = document.getElementById("canvas-img");
+    ctx.drawImage(canvasImg, 0, 0);
+});
 //キャンバスに文字を描く
 function drawText()
 {
