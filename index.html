@@ -29,12 +29,17 @@
         <canvas id="preview" style="width: 40vw;"></canvas>
     </p>
     <p>@Mira_AiMiku</p>
-    <p>
-        <input type="range" min="10" max="200" value="80" id="myslider">
-        <input type="text" id="canvas_text" value="@Mira_AiMiku">
-        <button onclick="drawText();">文字を描く</button>
-    </p>
-    <div>
+    <div class="center">
+        <input type="color" id="head" name="head" value="#ffffff" />
+        <br>
+        <p>
+            <input type="number" min="10" max="200" value="80" id="myslider">
+            <button onclick="auto();">自動</button>
+        </p>
+        <p>
+            <input type="text" id="canvas_text" value="@Mira_AiMiku">
+            <button onclick="drawText();">文字を描く</button>
+        </p>
         <a id="download" href="#" download="canvas.png">ダウンロード</a>
     </div>
     <script src="system.js"></script>

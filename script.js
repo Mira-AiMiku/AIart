@@ -43,8 +43,19 @@ function drawText()
     // ctx.fillText(text.value, x, y);
     // base64 = canvas.toDataURL("image/png");
     // document.getElementById("download").href = base64;
-    main_system.create_text(0, document.getElementById('canvas_text').value, "IPAMincho", element.value, '#ffffff');
+    main_system.create_text(0, document.getElementById('canvas_text').value, "IPAMincho", element.value, document.getElementById("head").value);
     main_system.drawText();
+}
+
+function auto() {
+    var scale;
+    if(main_system.height > main_system.width){
+        scale = main_system.height / 3840;
+    } else {
+        scale = main_system.width / 3840;
+    }
+    var element = document.getElementById('myslider');
+    element.value = Math.floor(element.value*scale);
 }
 
 function preview (e) {

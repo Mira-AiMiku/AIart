@@ -43,7 +43,7 @@ class Img_text{
         this.color = color;
         this.ctx = this.main.canvas.getContext('2d');
         this.x = Math.floor(this.main.width - (Number(this.textsize)/4 * this.text.length) - Number(this.textsize));
-        this.y = Math.floor(this.main.height-0.75*Number(this.textsize));
+        this.y = Math.floor(this.main.height-0.75*Number(this.textsize)+1);
     }
 
     write(){
@@ -52,7 +52,7 @@ class Img_text{
         this.ctx.textBaseline = 'bottom';
         this.ctx.textAlign = 'center';
         this.x = Math.floor(this.main.width - (Number(this.textsize)/4 * this.text.length) - Number(this.textsize));
-        this.y = Math.floor(this.main.height-0.75*Number(this.textsize));
+        this.y = Math.floor(this.main.height-0.75*Number(this.textsize)+1);
         this.ctx.fillText(this.text, this.x, this.y);
     }
 
@@ -62,6 +62,6 @@ class Img_text{
         this.textsize = textsize;
         this.color = color;
         this.x = Math.floor(this.main.width - (Number(this.textsize)/4 * this.text.length) - Number(this.textsize));
-        this.y = Math.floor(this.main.height-0.75*Number(this.textsize));
+        this.y = Math.floor(this.main.height-0.75*Number(this.textsize)+1);
     }
 }
